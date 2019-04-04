@@ -3,9 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "airtable": "^0.5.9",
+    "bootstrap": "^4.2.1",
+    "fuse.js": "^3.4.4",
+    "gsap": "^2.0.2",
+    "jquery": "^3.3.1",
+    "react": "^16.7.0",
+    "react-big-scheduler": "^0.2.6",
+    "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1",
+    "reactstrap": "^7.1.0",
+    "scroll-entrance": "^1.0.0",
+    "styled-components": "^4.1.3"
+  },
+  "devDependencies": {
+    "react-scripts": "2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

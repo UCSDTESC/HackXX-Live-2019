@@ -1,14 +1,36 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html {
+  width: 100%;
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  width: 100%;
+  height: 100%; 
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.nav__white {
+  background: white !important;
+}
+
+/* Custom Entrance Animation */
+
+/*This is the initial state before animating */
+[data-entrance="rotate-in"]{
+    transform-origin: center;
+	  transform: scale(2) rotate(180deg);
+    opacity: 0;
+}
+/*This is the state after animating */
+[data-entrance="rotate-in"].has-animated{
+	transform: rotate(0deg);
+  opacity: 1;
 }
