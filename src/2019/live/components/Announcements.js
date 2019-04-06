@@ -104,6 +104,12 @@ class Announcements extends Component {
                 if (err) { console.error(err); return; }
             });*/
 
+        this.load()
+        //setInterval(() => this.load(), 2000)
+        
+    }
+
+    load() {
         fetch('/api/announcements')
             .then(r => r.json())
             .then(records => this.setState({records}))
