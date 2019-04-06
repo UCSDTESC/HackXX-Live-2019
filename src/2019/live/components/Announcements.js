@@ -82,7 +82,7 @@ class Announcements extends Component {
     }
 
     componentDidMount() {
-        this.base('Announcements')
+        /*this.base('Announcements')
             .select({
                 // Selecting records in Grid view:
                 view: "Grid view"
@@ -102,7 +102,11 @@ class Announcements extends Component {
 
             }, err => {
                 if (err) { console.error(err); return; }
-            });
+            });*/
+
+        fetch('/api/announcements')
+            .then(r => r.json())
+            .then(records => this.setState({records}))
     }
 
     formatTimestamp(timestamp) {
@@ -150,13 +154,13 @@ class Announcements extends Component {
         
         records.forEach(record => {
 
-            time = this.formatTimestamp(record.get('timestamp'));
+            time = this.formatTimestamp(record['timestamp']);
 
             // assemble the required fields and push into the list
             announcementList.push(
                 <div className='w-100'>
                     <AnnouncementBubble
-                        description={record.get('description')}
+                        description={record['description']}
                     />
                     <Timestamp>{time}</Timestamp>
                 </div>

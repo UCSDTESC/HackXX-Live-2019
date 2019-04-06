@@ -183,7 +183,7 @@ class Schedule extends Component {
 
     componentDidMount() {
         //getting data from the Schedule table
-        this.base('Schedule')
+        /*this.base('Schedule')
             .select()
             .all()
             .then(records => records.map(r => r._rawJson.fields))
@@ -193,7 +193,16 @@ class Schedule extends Component {
             })))
             .then(records => records.sort((a, b) => new Date(a.startTime) - new Date(b.startTime)))
             //using this.setState's callback function to trigger the derived data build when we have records
-            .then(records => this.setState({records}, this.createScheduleRows))
+            .then(records => {
+                console.log(records);
+                this.setState({records}, this.createScheduleRows)
+        })*/
+
+        fetch('/api/schedule')
+            .then(r => r.json())
+            .then(records => {
+                this.setState({records}, this.createScheduleRows)
+            })
     }
 
 
@@ -258,7 +267,6 @@ class Schedule extends Component {
 
     createScheduleRows() {
         let {records, rows} = this.state;
-
         //for every record...
         for (let i = 0;  i < records.length; i++) {
 
@@ -331,7 +339,6 @@ class Schedule extends Component {
 
     renderRows = () => {
         const {records, rows} = this.state;
-
         return rows.map((row, rowIdx) => {
             return (
                 <Row >
