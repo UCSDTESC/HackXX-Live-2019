@@ -7,6 +7,9 @@ const Airtable = require('airtable');
 const moment = require('moment');
 const TIME_LIMIT = 1000 / 5;
 
+const port = process.env.PORT || 8000;
+const app = express();
+
 const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY })
                 .base('appY4r7VAncjUupmp')
 
@@ -34,10 +37,6 @@ const limiter = new Bottleneck({
     minTime: TIME_LIMIT,
     maxConcurrent: 1
 });
-
-
-const port = process.env.port || 8000;
-const app = express()
 
 app.get('/api/schedule', (req, res) => {
     limiter.schedule(() => getSchedule())
