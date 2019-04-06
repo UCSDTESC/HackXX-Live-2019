@@ -6,6 +6,7 @@ const Bottleneck = require('bottleneck');
 const Airtable = require('airtable');
 const moment = require('moment');
 const TIME_LIMIT = 1000 / 5;
+const path = require("path");
 
 const port = process.env.PORT || 8000;
 const app = express();
@@ -56,6 +57,10 @@ app.get('/api/announcements', (req, res) => {
         .catch(e => {
             console.error(e)
         })
+})
+
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build/index.html'))
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

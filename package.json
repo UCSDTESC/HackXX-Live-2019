@@ -7,20 +7,21 @@
     "async-poll": "^1.2.0",
     "bootstrap": "^4.2.1",
     "bottleneck": "^2.17.1",
+    "concurrently": "^4.1.0",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "fuse.js": "^3.4.4",
     "gsap": "^2.0.2",
     "http-proxy-middleware": "^0.19.1",
     "jquery": "^3.3.1",
+    "path": "^0.12.7",
     "react": "^16.7.0",
     "react-big-scheduler": "^0.2.6",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1",
     "reactstrap": "^7.1.0",
     "scroll-entrance": "^1.0.0",
-    "styled-components": "^4.1.3",
-    "concurrently": "^4.1.0"
+    "styled-components": "^4.1.3"
   },
   "devDependencies": {
     "react-scripts": "2.1.2"
