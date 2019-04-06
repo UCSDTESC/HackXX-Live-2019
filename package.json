@@ -20,7 +20,7 @@
     "reactstrap": "^7.1.0",
     "scroll-entrance": "^1.0.0",
     "styled-components": "^4.1.3",
-    "concurrently": "^4.1.0",
+    "concurrently": "^4.1.0"
   },
   "devDependencies": {
     "react-scripts": "2.1.2"
