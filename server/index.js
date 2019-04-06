@@ -11,6 +11,8 @@ const path = require("path");
 const port = process.env.PORT || 8000;
 const app = express();
 
+app.use('/static', express.static(path.join(__dirname, '../build/static')));
+
 const base = new Airtable({ apiKey: process.env.REACT_APP_AIRTABLE_KEY })
                 .base('appY4r7VAncjUupmp')
 
