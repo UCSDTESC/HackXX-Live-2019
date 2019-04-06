@@ -76,6 +76,7 @@ class Links extends Component {
                 <LinkGroup><LinkText className="btn btn-outline-light" href="https://hackxx-2019.slack.com" target="_blank"><LinkIcon src="/slack.svg"/>Slack</LinkText></LinkGroup>
                 <LinkGroup><LinkText className="btn btn-outline-light" href="https://hackxx-2019.devpost.com" target="_blank"><LinkIcon src="/devpost.svg"/>Devpost</LinkText></LinkGroup>
                 <LinkGroup><LinkText className="btn btn-outline-light" href="/tracks.pdf" target="_blank"><LinkIcon src="/tracks.svg"/>Tracks</LinkText></LinkGroup>
+                <LinkGroup><LinkText className="btn btn-outline-light" href="/WestBallroomMap.pdf" target="_blank"><LinkIcon src="/map.svg"/>Map</LinkText></LinkGroup>
                 <LinkGroup><LinkText className="btn btn-outline-light" href="https://hackmd.io/s/SkHjBXsu4" target="_blank"><LinkIcon src="/faq.svg"/>FAQ</LinkText></LinkGroup>
             </LinkRect>
         )
