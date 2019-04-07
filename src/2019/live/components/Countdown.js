@@ -82,9 +82,9 @@ class Countdown extends Component {
         this.state = {
             endDate: new Date('April 7, 2019 13:30:00'),
             days: 0,
-            hours: 0,
-            minutes: 0,
-            seconds: 0
+            hours: '00',
+            minutes: '00',
+            seconds: '00'
         }
     }
 
@@ -101,10 +101,10 @@ class Countdown extends Component {
 
         if (diff < 0) {
             this.setState({
-                days: 0,
-                hours: 0,
-                minutes: 0,
-                seconds: 0
+                days: '00',
+                hours: '00',
+                minutes: '00',
+                seconds: '00'
             })
         }
         else {
