@@ -97,9 +97,9 @@ class Countdown extends Component {
     }  
 
     getTimeUntil() {
-        const time = this.state.endDate - Date.now();
+        const diff = this.state.endDate - Date.now();
 
-        if (time < 0) {
+        if (diff < 0) {
             this.setState({
                 days: 0,
                 hours: 0,
@@ -108,10 +108,10 @@ class Countdown extends Component {
             })
         }
         else {
-            const seconds = Math.floor((time/1000)%60);
-            const minutes = Math.floor((time/1000/60)%60);
-            const hours = Math.floor((time/(1000*60*60))%24);
-            const days = Math.floor(time/(1000*60*60*24));
+            const seconds = Math.floor((diff/1000)%60).toString().padStart(2, '0');
+            const minutes = Math.floor((diff/1000/60)%60).toString().padStart(2, '0');
+            const hours = Math.floor((diff/(1000*60*60))%24).toString().padStart(2, '0');
+            const days = Math.floor(diff/(1000*60*60*24));
 
             this.setState({ days, hours, minutes, seconds });
         }
