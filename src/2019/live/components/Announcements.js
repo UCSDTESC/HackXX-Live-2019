@@ -113,7 +113,7 @@ class Announcements extends Component {
         fetch('/api/announcements')
             .then(r => r.json())
             .then(records => {
-                //records = records.sort((a, b) => b.timestamp  - a.timestamp);
+                records = records.sort((a, b) => new Date(b.timestamp)  - new Date(a.timestamp));
                 this.setState({records})
             })
     }
