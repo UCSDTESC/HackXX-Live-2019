@@ -112,7 +112,10 @@ class Announcements extends Component {
     load() {
         fetch('/api/announcements')
             .then(r => r.json())
-            .then(records => this.setState({records}))
+            .then(records => {
+                records = records.sort((a, b) => new Date(b.timestamp)  - new Date(a.timestamp));
+                this.setState({records})
+            })
     }
 
     formatTimestamp(timestamp) {
